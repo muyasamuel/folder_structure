@@ -46,7 +46,14 @@ function Folder({files}) {
                 
 
         </div>
-   
+        
+        {files.isFolder &&
+        fileOpen &&
+        files.children.map((exp, idx) => (
+          <div style={{ paddingLeft: '20px' }}>
+            <Folder files={exp} />
+          </div>
+        ))}
       
        
        
