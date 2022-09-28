@@ -1,6 +1,7 @@
 
 import './App.css';
 import Folder from './Folder';
+import { files } from './data'
 
 function App() {
   return (
@@ -12,7 +13,7 @@ function App() {
             overflowX: 'scroll',
             padding: '10px',
           }}>
-            <Folder />
+            <Folder files={files} />
 
        </div>
     </div>
