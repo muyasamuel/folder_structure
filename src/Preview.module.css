@@ -1,5 +1,6 @@
 .wrapper {
     position: relative;
+    display: inline-block;
 }
 
 
@@ -9,5 +10,5 @@
   left: "-60px";
   right: "0";
   z-index: 10;
-  background-color: transparent;
+  background-color: red;
 }
