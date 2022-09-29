@@ -11,6 +11,9 @@ function App() {
        </div>
 
        <div className='previewContainer'>
+        <div> Check out my <span> Twitter </span> Page</div>
+        <div> Check out my <span> Github </span> Page</div>
+        <div> Check out my <span> Instagram </span> Page</div>
         
        </div>
     </div>
