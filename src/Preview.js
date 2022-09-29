@@ -3,6 +3,9 @@ import styles from "./Preview.module.css";
 import { encode } from "qss";
 
 function Preview({ url, children }) {
+    const [showImage, setShowImage] = useState(false);
+
+
   const width = 200;
   const height = 125;
 
@@ -18,8 +21,8 @@ function Preview({ url, children }) {
     "viewport.height": height * 3,
   });
 
-  
-  const [showImage, setShowImage] = useState(false);
+
+   const src = `https://api.microlink.io/?${param}`;
 
   return (
     <div className={styles.wrapper}>
