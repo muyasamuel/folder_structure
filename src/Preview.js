@@ -1,8 +1,13 @@
 import React from 'react'
 
-function Preview() {
+function Preview({ url,  children}) {
   return (
-    <div>Preview</div>
+    <div>
+        <div className='imageDiv'>
+
+        </div>
+    <a href={url}> {children}</a>
+    </div>
   )
 }
 
