@@ -24,24 +24,24 @@ function Folder({files}) {
         onClick={() => setFileOpen(!fileOpen)}
         >
         {!files.isFolder  &&
-         <Icon name={findFileExtensionName(files.name)}   style={{ height: '19px', marginRight: '8px', flexShrink: 0 }} />
+         <Icon name={findFileExtensionName(files.name)}   style={{ height: '15px', marginRight: '7px', flexShrink: 0 }} />
          }
 
-        {files.isFolder ? (
+        {files.isFolder &&  (
                 <>
                     {fileOpen ? (
                     <Icon
                         name="caretDown"
-                        style={{ height: '12px', marginRight: '4px', flexShrink: 0 }}
+                        style={{ height: '15px', marginRight: '7px', flexShrink: 0 }}
                     />
                     ) : (
                     <Icon
                         name="caretRight"
-                        style={{ height: '12px', marginRight: '4px', flexShrink: 0 }}
+                        style={{ height: '15px', marginRight: '7px', flexShrink: 0 }}
                     />
                     )}
                 </>
-                ) : null}
+                ) }
             {files.name}    
                 
 
