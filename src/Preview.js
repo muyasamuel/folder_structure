@@ -1,9 +1,14 @@
-import React, { useState } from "react";
+import React, {useEffect, useState } from "react";
 import styles from "./Preview.module.css";
 import { encode } from "qss";
 
 function Preview({ url, children }) {
-    const [showImage, setShowImage] = useState(false);
+    const [showImage, setShowImage] = useState(null);
+    const [isMounted, setIsMounted] = useState(false);
+
+    useEffect(() => {
+        setIsMounted(true);
+      }, []);
 
 
   const width = 200;
@@ -26,7 +31,9 @@ function Preview({ url, children }) {
 
   return (
     <div className={styles.wrapper}>
-      {showImage && <div className={styles.imageDiv}> hello hello am here</div>}
+      { isMounted && showImage && <div className={styles.imageDiv}> 
+       <img src={src} alt=""  width={width} height={height} className={styles.image}/>
+      </div>}
 
       <a
         href={url}
